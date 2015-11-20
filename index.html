@@ -1,0 +1,415 @@
+<html>
+<head>
+	<title>Starwar</title>
+</head>
+<body bgcolor="Black">
+<canvas id="canvas_id" width="500" height="500"></canvas>
+<embed src="https://mp3spotify.net/sc/file/35951442.mp3" autostart="true" loop="true"
+width="2" height="0">
+</embed>
+<style>
+div.handsome {
+    position: absolute;
+    top: 10px;
+    left: 920px;
+    width: 400px;
+    height: 400px;
+    border: 3px solid #73AD21;
+}
+div.dialogue{
+	position: absolute;
+	top:10px;
+	left:20px;
+	width:370px;
+}
+div.headline{
+	position:absolute;
+	top: 510px;
+	left:480px;
+}
+</style>
+<div class="handsome">
+<h1 style="color:white">How to play</h1>
+<p style="color:white">1.Typing corresponding letters to shoot down the letter asteroids.</p>
+<p style="color:white">2.Using arrow keys to move the plane.</p>
+<p style="color:white">3.You lose when crash.</p>
+<p style="color:#FF00FF">4.Dialog Box is on the left. Don't miss the plot~</p>
+<p style="color:#FF00FF">5.Don't hesitate to use pause to go through the plot~</p>
+<button id="button1_id" type="button" style="height:50px; width:200px">Begin</button>
+<button id="button2_id" type="button" style="height:50px; width:200px">Pause</button>
+</div>
+
+<div class="dialogue">
+<h1 style="color:white">Dialogue in the dark</h1>
+<p id="p1" style="color:#FF00FF">>Sound: 有人吗？</p>
+<p id="p2" style="color:#FF00FF">>Sound: だれかいますか?</p>
+<p id="p3"style="color:#FF00FF">>Sound: Is there anyone alive?</p>
+<p id="p4"style="color:#FF7F50">>You: Yes. Identify yourself.</p>
+<p id="p5"style="color:#FF00FF">>Sound: Oh! Thank God! My name is La Flaga. I'm from the Earth Federation, the 8th fleet.</p>
+<p id="p6"style="color:#FF7F50">>You: Where are others? I mean, where is your fleet.</p>
+<p id="p7"style="color:#FF00FF">>La Flaga: They all died because of the sudden nucler explosion in L4.</p>
+<p id="p8"style="color:#FF7F50">>You: I'm sorry about that.</p>
+<p id="p9"style="color:#FF00FF">>La Flaga: That's miserable, but war is war.</p>
+<p id="p10"style="color:#FF7F50">>You: Yeah, well, so what are your orders now?</p>
+<p id="p11"style="color:#FF00FF">>La Flaga: I have no orders. I lost connexion to my HQ. But I think I need to keep on doing my job. You know, defending earth and fighting against the vile ZAFT.</p>
+<p id="p12"style="color:#FF00FF">>La Flaga:Oh dame it. Another enemy fleet!</p>
+<p id="p13"style="color:#FF7F50">>You: Well, I have a premonition. You wanna hear?</p>
+<p id="p14"style="color:#FF00FF">>La Flaga: Of course. Nothing could be the worst in a war.</p>
+<p id="p15"style="color:#FF7F50">>You: Well, I think we have already been targeted by ZAFT. Incoming enemy is endless!</p>
+<p id="p16"style="color:#FF00FF">>La Flaga: Hah!Hah! I've never thought of becoming so adorable!</p>
+<p id="p17"style="color:#FF7F50">>You: Well, that's, funny.</p>
+<p id="p18"style="color:#FF00FF">>La Flaga: (Mumble)Oh, dame it. I will take you out!</p>
+<p id="p19"style="color:#FF7F50">>You: Is everything Ok?</p>
+<p id="p20"style="color:#FF00FF">>La Flaga: Yep. Of course.</p>
+<p id="p21"style="color:#FF00FF">>La Flaga: (Mumble)Oh! Come on! Dame!</p>
+<p id="p22"style="color:#FF7F50">>You: What's the matter?</p>
+<p id="p23"style="color:#FF00FF">>La Flaga: I am out of energy.</p>
+<p id="p24"style="color:#FF7F50">>You: Do you have backup power tank?</p>
+<p id="p25"style="color:#FF00FF">>La Flaga: Yes. I am trying to innitialize it.</p>
+<p id="p26"style="color:#FF7F50">>You: Everything goes well?</p>
+<p id="p27"style="color:#FF00FF">>La Flaga: Bad news! The tank was damaged by ZAFT laser cannon.</p>
+<p id="p28"style="color:#FF00FF">>La Flaga: Well, I think I can't hold on for a long time.</p>
+<p id="p29"style="color:#FF7F50">>You: No, it can't be!</p>
+<p id="p30"style="color:#FF00FF">>La Flaga: Well, boy, don't be that sissy. </p>
+<p id="p31"style="color:#FF00FF">>La Flaga: It's my honor to meet you and fight beside you.</p>
+<p id="p32"style="color:#FF7F50">>You: (Sobbing)Dame it! No! Dame it!</p>
+<p id="p33"style="color:#FF00FF">>La Flaga: I have no one to heart, so I'm free to go now.</p>
+<p id="p34"style="color:#FF00FF">>La Flaga: Remember boy. You are fighting for neither your orders or that cold machine. You are fighting for your dream!</p>
+<p id="p35"style="color:#FF00FF">>La Flaga: Well, it seems that it's time to go.</p>
+<p id="p36"style="color:#FF00FF">>La Flaga: I still don't know your name boy.</p>
+<p id="p37"style="color:#FF00FF">>La Flaga: But farewell! Never forget your beginning! Bye! My boy.</p>
+<p id="p38"style="color:#FF7F50">>You: No! No! My name is Athrun!(connexion lost)</p>
+<p id="p39"style="color:#FF7F50">>You: Dame it! Dame it! I'll kill you all! I'll make you pay!</p>
+</div>
+<div class="headline">
+<img src="http://3.bp.blogspot.com/-7Vp80wIv_II/UpOyEqt2apI/AAAAAAAAAyE/MPStAQ3CUQw/s320/Star-Wars-Logo.png" width="360px">
+<p style="font-size:60%;color:white" >Not for commercial use.</p>
+</div>
+<script src="https://code.jquery.com/jquery-2.1.0.js"> </script>
+
+<script>
+var myColor={
+0:'#00FF00',
+1:'#FF0000',
+2:'#FF0033',
+3:'#CC00CC',
+4:'#FF6633',
+5:'#66FF00',
+6:'#FF66FF',
+7:'#CCFF00',
+8:'#00FFCC'
+}
+canvas=document.getElementById("canvas_id");
+width=canvas.width;
+height=canvas.height;
+ctx=canvas.getContext("2d");
+$(canvas).css({
+	position:"absolute",
+	left:400,
+	top:0
+})
+
+
+var background=document.createElement('img');
+background.src='http://scienceblogs.com/startswithabang/files/2011/10/normal_Star-field-near-M31.jpeg';
+var prepare=function(){
+	ctx.clearRect(0,0,width,height);
+	ctx.drawImage(background,0,0,width*3,height*3,0,0,width,height);
+}
+
+
+
+
+var Letter=function(x,xSpeed,ySpeed,content){
+	this.x=x;
+	this.y=0;
+	this.xSpeed=xSpeed;
+	this.ySpeed=ySpeed;
+	this.content=content;
+	this.death=false;
+	this.color=myColor[Math.floor(Math.random()*9)];
+	this.predator;
+	
+}
+
+Letter.prototype.move=function(){
+	this.x=this.x+this.xSpeed;
+	this.y=this.y+this.ySpeed;
+	if (this.x+25>=width){
+		this.x=width*2-50-this.x;
+		this.xSpeed=0-this.xSpeed;
+	}
+	if (this.x<=0){
+		this.x=0-this.x;
+		this.xSpeed=0-this.xSpeed;
+	}
+	if (this.y>=height) {
+		delete bullets[this.predator];
+		delete this;
+		return;
+		
+	}
+}
+
+Letter.prototype.draw=function(){
+	ctx.font = '25px Impact';
+    ctx.fillStyle = this.color;
+	ctx.strokeStyle = this.color;
+	ctx.textAlign="left";
+	ctx.textBaseline = 'top';
+	ctx.fillText( this.content, this.x , this.y);
+	ctx.strokeRect(this.x,this.y,25,25);
+}
+
+
+var letters=[];
+
+var addnew=function(number,speedrange){
+	for(var j=0;j<number;j++){
+		q=Math.floor(Math.random()*26);
+		var newletter= String.fromCharCode(65 + q);
+		var xPosition=Math.floor(Math.random()*width);
+		var xxSpeed=Math.random()*4-2;
+		letters.push(new Letter(xPosition,xxSpeed,speedrange,newletter));
+	}
+}
+
+
+
+
+
+
+gameover=function(){
+	ifGameOver=true;
+	ctx.fillStyle="Red";
+	ctx.textAlign="center";
+	ctx.textBaseline="middle";
+	ctx.fillText("Game Over",width/2,height/2);
+
+}
+
+
+
+var Plane=function(){
+	this.x=width/2;
+	this.size=15;
+	this.y=height-this.size;
+}
+
+Plane.prototype.move=function(direction){
+	if (direction==37 && this.x>=this.size+1) this.x-=2;
+	if (direction==38 && this.y>=this.size+1) this.y-=2;
+	if (direction==39 && this.x<=width-this.size-1) this.x+=2;
+	if (direction==40 && this.y<=height-this.size-1) this.y+=2;
+}
+
+Plane.prototype.draw=function(){
+	ctx.strokeStyle="#FFFAF0";
+	ctx.strokeRect(this.x-this.size,this.y-this.size,this.size*2,this.size*2);
+	ctx.beginPath();
+	ctx.arc(this.x,this.y,this.size/2,90,Math.PI,true);
+	ctx.fillStyle="#FFFAF0";
+	ctx.fill();
+}
+
+Plane.prototype.ifCrashed=function(){
+	for (var i=0;i<letters.length;i++)
+		if(letters[i]!=undefined)
+		if(((letters[i].x>=this.x-this.size-25) && (letters[i].x<=this.x+this.size))&&((letters[i].y+25>=this.y-this.size) && (letters[i].y<=this.y+this.size))) gameover();
+}
+
+
+
+
+
+var Bullet=function(x,y,target){
+	this.x=x;
+	this.y=y;
+	this.speed=3.5;
+	this.target=target;
+}
+Bullet.prototype.move=function(){
+	if(letters[this.target].x-this.x>0){
+		this.y=this.y+Math.sin(Math.atan((letters[this.target].y-this.y)/(letters[this.target].x-this.x)))*this.speed;
+		this.x=this.x+Math.cos(Math.atan((letters[this.target].y-this.y)/(letters[this.target].x-this.x)))*this.speed;
+	}else {
+		this.y=this.y-(Math.sin(Math.atan((letters[this.target].y-this.y)/(letters[this.target].x-this.x)))*this.speed);
+		this.x=this.x-(Math.cos(Math.atan((letters[this.target].y-this.y)/(letters[this.target].x-this.x)))*this.speed);
+	}
+
+}
+
+Bullet.prototype.draw=function(){
+	ctx.fillStyle="#FFDEAD";
+	ctx.beginPath();
+	ctx.arc(this.x,this.y,5,0,Math.PI*2,false);
+	ctx.fill();
+}
+
+Bullet.prototype.ifShot=function(){
+	if((this.x>=letters[this.target].x-5 && this.x<=letters[this.target].x+25)&&(this.y>=letters[this.target].y-5 && this.y<=letters[this.target].y+25)){
+		return true;
+	}
+	else return false;
+}
+
+
+
+
+
+
+
+var drawscore=function(){
+	ctx.font="small-caps 30px Arial";
+	ctx.fillStyle="turquoise";
+	ctx.textBaseline="top";
+	ctx.textAlign="left";
+	ctx.fillText("Score: "+ score,0,0);
+}
+
+var drawlevel=function(){
+	ctx.font="small-caps 30px Arial";
+	ctx.fillStyle="turquoise";
+	ctx.textBaseline="top";
+	ctx.textAlign="center";
+	ctx.fillText("Level: "+ level,width/2,0);
+}
+var drawtime=function(time){
+	ctx.font="small-caps 30px Arial";
+	ctx.fillStyle="turquoise";
+	ctx.textBaseline="top";
+	ctx.textAlign="right";
+	ctx.fillText("Time: "+time,width,0);
+}
+
+
+
+
+
+
+
+
+var map=[];
+var timeCounter=0; 
+var time=0;
+var bullets=[];
+var i=0,j=0,score=0,keys=0,oo=0;
+var myplane=new Plane;
+var jletters=1;
+var level=1,waves=0;
+var ifGameOver=false;
+var ifPause=false;
+var ifBegin=false;
+
+for (i=1;i<=39;i++) $(document.getElementById('p'+i.toString())).fadeOut();
+i=50;
+
+$("#button2_id").click(function(event){
+	if(ifPause===true) {ifPause=false} else ifPause=true;
+})
+$("#button1_id").click(function(event){
+	if(ifBegin===false) { ifBegin=true;
+	var myInterval=setInterval(function(){
+	if(ifPause===false){
+		prepare();
+		//bullets
+		for(keys=65;keys<=90;keys++){
+			if (map[keys]===true){
+				for(oo=0;oo<letters.length;oo++) if(letters[oo]!=undefined && letters[oo].death===false){
+					if (letters[oo].content===String.fromCharCode(keys)){
+						bullets.push(new Bullet(myplane.x,myplane.y,oo));
+						letters[oo].death=true;
+						letters[oo].predator=bullets.length-1;
+						}
+				}
+			}
+		}
+
+
+		for(var iBullet=0;iBullet<=bullets.length;iBullet++) if(bullets[iBullet]!=undefined){
+			bullets[iBullet].move();
+			bullets[iBullet].draw();
+			if(bullets[iBullet].ifShot()){
+				delete letters[bullets[iBullet].target];
+				delete bullets[iBullet];
+			
+				score++;
+			}
+		}
+	
+		//myplane
+		for(keys=37;keys<=40;keys++){
+			if(map[keys]===true) myplane.move(keys);
+		}
+		myplane.draw();
+
+	
+		//letters
+		if(i===110){
+			waves++;
+			if(waves>3 && level<14){
+				waves=1;
+				level++;
+				jletters++;
+			}
+			j=jletters;
+			i=0;
+		}
+		if (j>0&&(i%8===0)) {
+			addnew(1,level/5);
+			j--;
+		}
+		i++;
+		for (var k=0;k<letters.length;k++) if(letters[k]!=undefined){
+			letters[k].move();
+			letters[k].draw();
+		}
+	
+
+		if (timeCounter%100===0){
+			var itimeCounter=timeCounter/100;
+			if((itimeCounter>8)&&(itimeCounter<39))$(document.getElementById('p'+((itimeCounter)-8).toString())).fadeOut();
+			$(document.getElementById('p'+(itimeCounter).toString())).fadeIn();
+		}
+		myplane.ifCrashed();
+	
+		drawlevel();
+		drawscore();
+		drawtime(time.toFixed(2));
+		time+=0.03;
+		timeCounter++;
+	}
+	
+},30);}
+	setInterval(function(){
+		if(ifGameOver===true) clearInterval(myInterval);
+},30);
+})
+
+
+$("body").keydown(function(event){
+	map[event.keyCode]=true;
+});
+
+$("body").keyup(function(event){
+	map[event.keyCode]=false;
+});
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+
+
+
+</script>
