@@ -1,0 +1,30 @@
+name: Daily arXiv Email Digest
+
+on:
+  schedule:
+    - cron: "0 13 * * *" # Runs daily at 13:00 UTC
+  workflow_dispatch:
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Send digest email
+        env:
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          EMAIL_TO: linweili@gmail.com
+          ARXIV_QUERY: all:"large language model" OR all:"text LLM" OR all:pretraining OR all:post-training OR all:"reinforcement learning" OR all:"RLHF" OR all:"alignment"
+          ARXIV_MAX_RESULTS: "40"
+          ARXIV_LOOKBACK_DAYS: "1"
+        run: python scripts/arxiv_digest.py
